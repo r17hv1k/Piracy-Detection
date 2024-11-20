@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Result</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Search Result</h1>
+        {% if flagged %}
+            <p style="color: red;">Potential piracy detected! The keyword <strong>{{ keyword }}</strong> was found on <a href="{{ url }}" target="_blank">{{ url }}</a>.</p>
+        {% else %}
+            <p style="color: green;">No piracy detected. The keyword <strong>{{ keyword }}</strong> was not found on <a href="{{ url }}" target="_blank">{{ url }}</a>.</p>
+        {% endif %}
+        <a href="/search">Search Again</a>
+        <a href="/logout">Logout</a>
+    </div>
+</body>
+</html>

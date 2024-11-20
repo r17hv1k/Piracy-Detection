@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Piracy Detection Tool</h1>
+        <form method="POST">
+            <label for="url">Enter URL:</label>
+            <input type="url" id="url" name="url" placeholder="e.g. Any pirated site" required>
+            <label for="keyword">Enter Keyword:</label>
+            <input type="text" id="keyword" name="keyword" placeholder="e.g. Movie name or TV show" required>
+            <button type="submit">Search</button>
+        </form>
+        <a href="/logout">Logout</a>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
