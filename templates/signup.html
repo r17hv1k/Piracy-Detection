@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <section>
+        <div class="signup-container">
+            <h1>Sign Up</h1>
+            <form method="POST">
+                <div class="input-field">
+                    <ion-icon name="person-outline"></ion-icon>
+                    <input type="text" id="username" name="username" required>
+                    <label>Username</label>
+                </div>
+                <div class="input-field">
+                    <ion-icon name="lock-closed-outline"></ion-icon>
+                    <input type="password" id="password" name="password" required>
+                    <label>Password</label>
+                </div>
+                <button type="submit">Sign Up</button>
+            </form>
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            <div class="error">
+                {{ messages[0] }}
+            </div>
+            {% endif %}
+            {% endwith %}
+            <div class="extra-links">
+                <a href="/">Back to Login</a>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

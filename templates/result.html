@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search Result</title>
-    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/static/style2.css">
 </head>
 <body>
     <div class="container">
@@ -12,10 +12,11 @@
         {% if flagged %}
             <p style="color: red;">Potential piracy detected! The keyword <strong>{{ keyword }}</strong> was found on <a href="{{ url }}" target="_blank">{{ url }}</a>.</p>
         {% else %}
-            <p style="color: green;">No piracy detected. The keyword <strong>{{ keyword }}</strong> was not found on <a href="{{ url }}" target="_blank">{{ url }}</a>.</p>
+            <p style="color: darkgreen;">No piracy detected. The keyword <strong>{{ keyword }}</strong> was not found on <a href="{{ url }}" target="_blank">{{ url }}</a>.</p>
         {% endif %}
-        <a href="/search">Search Again</a>
-        <a href="/logout">Logout</a>
+        
+        <a href="/search" class="border">Search Again</a>
+        <a href="/logout" class="border">Logout</a>
     </div>
 </body>
 </html>
